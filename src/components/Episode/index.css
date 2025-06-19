@@ -1,24 +1,26 @@
 .episode {
-  display: flex;
-  padding: 0.25rem;
-  border-bottom: 1px solid #ddd;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
 
-.episode__num {
-  flex: 0 0 auto;
-  font-size: 3rem;
-  font-weight: bold;
-  color: lightblue;
+.episode:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.episode__body {
-  padding: 0.7rem;
+.episode h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
 }
 
-.episode__title {
-  font-weight: bold;
-}
-
-.episode__guest {
-  color: #999;
+.episode p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
 }
