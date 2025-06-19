@@ -1,7 +1,7 @@
 import { render } from "@czechitas/render";
 import "../global.css";
 import "./index.css";
-import { EpisodeList } from "../components/EpisodeList";
+import { EpisodeList } from '../components/EpisodeList/EpisodeList';
 
 const episodes = [
   { num: 126, title: 'Robot, který snědl koblihu', guest: 'Radovan Siwek' },
@@ -14,10 +14,9 @@ const episodes = [
   { num: 133, title: 'Rybolov v Oceánu bouří', guest: 'Ludmila Gajová' },
 ];
 
-document.querySelector("#root").innerHTML = render(
-  <>
-    <div className="episodes-list">
-      <EpisodeList episodes={episodes} />
-    </div>
-  </>
+export const Page = () => (
+  <main>
+    <h2>Epizody</h2>
+    <EpisodeList episodes={episodes} />
+  </main>
 );

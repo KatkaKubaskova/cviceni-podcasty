@@ -1,15 +1,16 @@
-import { Episode } from "../Episode"
+import { Episode } from '../Episode/Episode';
 
-export const EpisodeList = ({ episodes }) =>  {
-    return (
-    <>
-        {episodes.map((episode) => (
-            <Episode
-            key={episode.num}
-            num={episode.num}
-            title={episode.title}
-            guest={episode.guest} 
-            /> 
-        ))}  
-    </>
-)}
+export const EpisodeList = ({ episodes }) => {
+  return (
+    <div className="episodes">
+      {episodes.map((ep) => (
+        <Episode
+          key={ep.num}
+          num={ep.num}
+          title={ep.title}
+          guest={ep.guest}
+        />
+      ))}
+    </div>
+  );
+};
